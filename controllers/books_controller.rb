@@ -6,13 +6,14 @@ end
 
 #NEW
 get '/books/new' do
-
+  @authors = Author.all()
+  erb(:'books/new')
 end
 
 #CREATE
 post '/books' do
 
-redirect to "books"
+  redirect to "books"
 end
 
 #SHOW
