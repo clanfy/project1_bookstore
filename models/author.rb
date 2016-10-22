@@ -11,4 +11,10 @@ class Author
     @name = options['name']
   end
 
+  def save()
+    sql = "INSERT INTO authors (name) VALUES ('#{@name}') RETURNING * "
+    author_info = run_sql(sql)
+    @id = author_info.first['id'].to_i
+  end
+
 end
