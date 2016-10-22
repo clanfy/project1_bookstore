@@ -1,8 +1,7 @@
 #INDEX
 get '/books' do
-  @books = Book.all()
-  erb(:'books/erb')
-
+  # @books = Book.all()
+  erb(:'books/index')
 end
 
 #NEW
