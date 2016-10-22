@@ -1,0 +1,21 @@
+#ALL OF THESE MAY NOT BE NECESSARY
+
+#INDEX
+
+
+#NEW
+
+
+#CREATE
+
+
+#SHOW
+
+
+#EDIT
+
+
+#UPDATE
+
+
+#DELETE
