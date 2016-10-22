@@ -6,7 +6,7 @@ end
 
 #NEW
 get '/authors/new' do
-
+erb(:'authors/new')
 end
 
 #CREATE
