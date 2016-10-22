@@ -1,6 +1,6 @@
 #INDEX
 get '/books' do
-  # @books = Book.all()
+  @books = Book.all()
   erb(:'books/index')
 end
 

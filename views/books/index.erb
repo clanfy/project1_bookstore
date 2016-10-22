@@ -1,2 +1,15 @@
 <h2>Book list</h2>
 
+
+<% if @books.count > 0 %>
+  <ul>
+  <% @books.each do |book| %>
+  <li>
+  <%= book.title %>
+  </li>
+  <% end %>
+  </ul>
+  <% else %>
+    <p> Please add a book! </p>
+
+    <% end %>

@@ -13,9 +13,16 @@ class Book
   end
 
   def save()
-    sql = "INSERT INTO books (title, author_id) VALUES ('#{@title}', '#{@author_id}') RETURNING * "
+    sql = "INSERT INTO books (title, author_id) VALUES ('#{@title}', #{@author_id}) RETURNING * "
     book_info = run_sql(sql)
     @id = book_info.first['id'].to_i
+  end
+
+  def self.all
+    sql = "SELECT * FROM books"
+    books_info = run_sql(sql)
+    books = books_info.map {|book| Book.new(book)}
+    return books
   end
 
 end
