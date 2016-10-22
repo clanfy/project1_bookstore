@@ -12,4 +12,10 @@ class Book
     @author_id = options['author_id']
   end
 
+  def save()
+    sql = "INSERT INTO books (title, author_id VALUES ('#{title}', '#{@author_id}' RETURNING * "
+    book_info = run_sql(sql)
+    @id = book_info.first['id'].to_i
+  end
+
 end
