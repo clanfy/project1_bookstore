@@ -1,5 +1,7 @@
 #INDEX
 get '/books' do
+  @books = Book.all()
+  erb(:'books/erb')
 
 end
 
@@ -20,16 +22,16 @@ get '/books/:id' do
 end
 
 #EDIT
-get '/movies/:id/edit' do 
+get '/books/:id/edit' do 
 
 end
 
 #UPDATE
-post '/movies/:id' do
+post '/books/:id' do
 
 end
 
 #DELETE
-delete '/movies' do
+delete '/books' do
 
 end
