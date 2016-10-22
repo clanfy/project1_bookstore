@@ -17,4 +17,11 @@ class Author
     @id = author_info.first['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM authors"
+    authors_info = run_sql(sql)
+    authors = authors_info.map {|author| Author.new(author)}
+    return authors
+  end
+
 end

@@ -1,0 +1,13 @@
+<h2> List of authors </h2>
+
+<% if @authors.count > 0 %>
+<ul>
+<% @authors.each do |author| %>
+  <li>
+  <%= author.name %>
+  </li>
+  <% end %>
+  </ul>
+  <% else %>
+  <p> Please add an author! </p>
+  <% end %>
