@@ -24,12 +24,14 @@ end
 
 #EDIT
 get '/authors/:id/edit' do 
-
+  @author = Author.find(params[:id])
+  erb(:'authors/edit')
 end
 
 #UPDATE
-post '/authors/:id' do
-
+put '/authors/:id' do
+  @author = Author.update(params)
+  redirect to("/authors/#{params[:id]}")
 end
 
 #DELETE
