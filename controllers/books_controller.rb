@@ -19,7 +19,8 @@ end
 
 #SHOW
 get '/books/:id' do
-
+  @book = Book.find(params[:id])
+  erb(:'books/show')
 end
 
 #EDIT
