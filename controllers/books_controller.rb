@@ -12,8 +12,9 @@ end
 
 #CREATE
 post '/books' do
-
-  redirect to "books"
+  @book = Book.new(params)
+  @book.save()
+  redirect to('/books')
 end
 
 #SHOW
