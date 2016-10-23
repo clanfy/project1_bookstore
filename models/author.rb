@@ -38,6 +38,15 @@ class Author
     return result
   end
 
+  def self.update(options)
+    sql = "UPDATE authors SET name = '#{options['name']}' WHERE id = #{options['id']}"
+    run_sql(sql)
+  end
+
+  def self.delete(id)
+    
+  end
+
 end
 
 
