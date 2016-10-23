@@ -31,4 +31,16 @@ class Author
     return authors
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM authors WHERE id = #{id}"
+    authors = run_sql(sql)
+    result = Author.new(authors.first)
+    return result
+  end
+
 end
+
+
+
+
+
