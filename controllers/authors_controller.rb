@@ -18,7 +18,8 @@ end
 
 #SHOW
 get '/authors/:id' do
-
+ @author = Author.find(params[:id])
+ erb(:'authors/show')
 end
 
 #EDIT
