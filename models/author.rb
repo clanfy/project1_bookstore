@@ -17,6 +17,13 @@ class Author
     @id = author_info.first['id'].to_i
   end
 
+  def books()
+    sql = "SELECT * FROM books WHERE author_id = #{@id}"
+    books_info = run_sql(sql)
+    books = books_info.map {|book| Book.new(books_info)}
+    return books
+  end
+
   def self.all()
     sql = "SELECT * FROM authors"
     authors_info = run_sql(sql)
