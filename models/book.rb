@@ -32,6 +32,15 @@ class Book
     return books
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM books WHERE id = #{id}"
+    books = run_sql(sql)
+    result = Book.new(books.first)
+    return result
+  end
 
 
 end
+
+
+
