@@ -44,7 +44,8 @@ class Author
   end
 
   def self.delete(id)
-    
+    sql = "DELETE FROM authors WHERE id =#{id}"
+    run_sql(sql)
   end
 
 end
