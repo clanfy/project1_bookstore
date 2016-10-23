@@ -25,12 +25,15 @@ end
 
 #EDIT
 get '/books/:id/edit' do 
-
+  @book = Book.find(params[:id])
+  @authors = Author.all()
+  erb(:'books/edit')
 end
 
 #UPDATE
-post '/books/:id' do
-
+put '/books/:id' do
+  @book = Book.update(params)
+  redirect to("/books/#{params[:id]}")
 end
 
 #DELETE

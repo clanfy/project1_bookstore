@@ -1,0 +1,20 @@
+<div class="content">
+
+  <h2>Edit Book</h2>
+
+  <form action="/books/<%= @book.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="<%= @book.title %>"<br>
+
+    <select name="author_id">
+    <% @authors.each do |author| %>
+    <option value="<%= author.id %>" <%= 'selected' if @book.author.id == author.id %>><%= author.name %></option>
+    <% end %>
+  </select>
+
+  <input type='submit' value="Update Book">
+</form>
+
+
+</div>

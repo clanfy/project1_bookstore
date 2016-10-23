@@ -41,7 +41,7 @@ class Book
   end
 
   def self.update(options)
-    sql = "UPDATE books SET title = '#{options['title']}', author_id = #{options['author_id']} WHERE id - #{options['id']}"
+    sql = "UPDATE books SET title = '#{options['title']}', author_id = #{options['author_id']} WHERE id = #{options['id']}"
     run_sql(sql)
   end
 
