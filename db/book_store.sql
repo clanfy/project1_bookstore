@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS stock;
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS authors;
 
@@ -14,7 +14,8 @@ CREATE TABLE books (
   author_id int4 REFERENCES authors(id)
 );
 
--- CREATE TABLE inventory (
-
-
--- );
+CREATE TABLE stock (
+  id serial4 PRIMARY KEY,
+  book_id int4 REFERENCES books(id),
+  author_id int4 REFERENCES authors(id)
+);
