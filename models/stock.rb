@@ -19,5 +19,12 @@ class Stock
     @id = stock_info.first['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM stock"
+    stock_info = run_sql(sql)
+    stocks = stock_info.map {|stock| Stock.new(stock)}
+    return stocks
+  end
+
 
 end
