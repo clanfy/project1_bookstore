@@ -3,6 +3,7 @@
 <h2>Add stock!</h2>
 
 <form action="/stock" method="post">
+
   <label for="book">Book:</label>
   <select name="book_id">
   <% @books.each do |book| %>
@@ -19,6 +20,8 @@
       <% end %> 
     </select>
 
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity"><br>
 
   <input type="submit" value="Add stock">
   </form>
