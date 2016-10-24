@@ -5,6 +5,9 @@
   <% @stock.each do |stock| %>
   <li>
   <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
+  <br>
+  <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
+  <br>
   </li>
   <% end %>
   </ul>
