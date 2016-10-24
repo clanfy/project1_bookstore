@@ -3,9 +3,23 @@
   <h2>Edit Stock</h2>
 
   <%= @stock.book.title %> by <%= @stock.book.author.name %>
+
   <br>
   <form action="/stock/<%= @stock.id %>" method="post">
     <input type="hidden" name="_method" value="put">
+    <label for="title">Book title:</label>
+    <select name="book_id">
+      <% @books.each do |book| %>
+      <option value="<%= book.id %>" <%= 'selected' if @stock.book.id == book.id %>><%= book.title %></option>
+      <% end %>
+    </select>
+
+    <select name="author_id">
+      <% @authors.each do |author| %>
+      <option value="<%= author.id %>" <%= 'selected' if @stock.author.id == author.id %>><%= author.name %></option>
+      <% end %>
+    </select>
+
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" value="<%= @stock.quantity %>"><br>
 

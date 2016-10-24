@@ -18,5 +18,5 @@ CREATE TABLE stock (
   id serial4 PRIMARY KEY,
   book_id int4 REFERENCES books(id),
   author_id int4 REFERENCES authors(id),
-  quantity INT2
+  quantity INT3
 );
