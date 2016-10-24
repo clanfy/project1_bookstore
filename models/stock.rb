@@ -26,5 +26,12 @@ class Stock
     return stocks
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM stock where id = #{id}"
+    stocks = run_sql(sql)
+    result = Stock.new(stocks.first)
+    return result
+  end
+
 
 end
