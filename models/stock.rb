@@ -33,5 +33,10 @@ class Stock
     return result
   end
 
+  def self.update(options)
+    sql = "UPDATE stock SET book_id = '#{options['book_id']}', '#{options['author_id']}' WHERE id = #options['id']} "
+    run_sql(sql)
+  end
+
 
 end
