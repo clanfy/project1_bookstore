@@ -13,7 +13,9 @@ end
 
 #CREATE
 post '/stock' do
-
+  @stock = Stock.new(params)
+  @stock.save()
+  redirect to('/stock')
 end 
 
 #SHOW
