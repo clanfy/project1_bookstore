@@ -5,7 +5,7 @@
   <ul>
   <% @books.each do |book| %>
   <li>
-  <%= book.title %> by <%= book.author.name %>
+  <a href="/books/<%= book.id %>"><%= book.title %></a> by <%= book.author.name %>
   </li>
   <% end %>
   </ul>
@@ -13,3 +13,4 @@
     <p> Please add a book! </p>
 
     <% end %>
+
