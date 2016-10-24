@@ -48,12 +48,12 @@ class Stock
   end
 
   def self.update(options)
-    sql = "UPDATE stock SET book_id = '#{options['book_id']}', '#{options['author_id']}' WHERE id = #options['id']} "
+    sql = "UPDATE stock SET book_id = '#{options['book_id']}', '#{options['author_id']}', '#{options['quantity']}' WHERE id = #options['id']}"
     run_sql(sql)
   end
 
   def self.delete(id)
-    sql = "DELETE FROM books where id = #{id}"
+    sql = "DELETE FROM stock WHERE id = #{id}"
     run_sql(sql)
   end
 

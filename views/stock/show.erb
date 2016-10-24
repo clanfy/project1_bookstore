@@ -1,1 +1,13 @@
 <%= @stock.quantity %> X <%= @stock.book.title %> by <%= @stock.book.author.name %>
+<br>
+
+<a href="/stock/<%= @stock.id %>/edit">Edit Stock</a>
+
+<form action="/stock/<%= @stock.id %>" method="post">
+
+<input type="hidden" name="_method" value="delete">
+
+<form action="/stock/<%= @stock.id %>/delete" method="post">
+
+<input type="submit" value="Delete">
+</form>

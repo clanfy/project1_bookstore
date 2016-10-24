@@ -1,0 +1,26 @@
+<div class="content">
+
+  <h2>Edit Stock</h2>
+
+  <form action="/stock/<%= @stock.id %>" method="post">
+
+    <input type="hidden" name="_method" value="put">
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="<%= @stock.
+    book.title %>"<br>
+
+
+    <select name="author_id">
+    <% @authors.each do |author| %>
+    <option value="<%= author.id %>" <%= 'selected' if @stock.author.id == author.id %>><%= @stock.author.name %></option>
+    <% end %>
+  </select>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity"><br>
+
+  <input type='submit' value="Update Stock">
+</form>
+
+
+</div>

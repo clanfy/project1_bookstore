@@ -26,12 +26,16 @@ end
 
 #EDIT
 get '/stock/:id/edit' do
-
+  @stock = Stock.find(params[:id])
+  @books = Book.all()
+  @authors = Author.all()
+  erb(:'stock/edit') 
 end
 
 #UPDATE
 put '/stock/:id' do
-
+  @stock = Stock.update(params)
+  redirect to("/stock/#{params[:id]}")
 end
 
 #DELETE
