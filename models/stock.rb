@@ -19,6 +19,20 @@ class Stock
     @id = stock_info.first['id'].to_i
   end
 
+  def author()
+    sql = "SELECT * FROM authors WHERE id = #{@author_id}"
+    author_info = run_sql(sql)
+    author = Author.new(author_info.first)
+    return author
+  end
+
+  def book()
+    sql = "SELECT * FROM books WHERE id = #{@book_id}"
+    book_info = run_sql(sql)
+    book = Book.new(book_info.first)
+    return book
+  end
+
   def self.all
     sql = "SELECT * FROM stock"
     stock_info = run_sql(sql)
