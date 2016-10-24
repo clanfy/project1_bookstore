@@ -37,6 +37,7 @@ put '/books/:id' do
 end
 
 #DELETE
-delete '/books' do
-
+delete '/books/:id' do
+    Book.destroy(params[:id])
+    redirect to('/books')
 end

@@ -45,7 +45,7 @@ class Book
     run_sql(sql)
   end
 
-  def self.delete(id)
+  def self.destroy(id)
     sql = "DELETE from books WHERE id = #{id}"
     run_sql(sql)
   end
