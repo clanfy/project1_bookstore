@@ -4,4 +4,10 @@
   <ul>
   <% @stock.each do |stock| %>
   <li>
-  <%= stock
+  <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
+  </li>
+  <% end %>
+  </ul>
+  <% else %>
+  <p> Please add stock! </p>
+  <% end %>
