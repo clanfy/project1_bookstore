@@ -4,12 +4,14 @@ body {
 }
 
 nav ul li {
+  font-family: 'Cookie', cursive;
   display: inline-block;
-  list-style: none;
+  list-style: table;
 }
 
 nav a {
   border-radius: 25px;
+  font-size: 35px;
   text-decoration: none;
   background-color: Black;
   color: white;
@@ -18,7 +20,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: grey;
+  background-color: white;
+  color: #f44268;
 }
 
 nav {
