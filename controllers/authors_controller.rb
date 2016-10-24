@@ -35,6 +35,10 @@ put '/authors/:id' do
 end
 
 #DELETE
-delete '/authors' do
-
+delete '/authors/:id' do
+  Author.delete(params[:id])
+  redirect to('/authors')
 end
+
+
+
