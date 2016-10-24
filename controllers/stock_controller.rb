@@ -20,7 +20,8 @@ end
 
 #SHOW
 get '/stock/:id' do
-
+  @stock = Stock.find(params[:id])
+  erb(:'stock/show')
 end
 
 #EDIT
