@@ -40,5 +40,6 @@ end
 
 #DELETE
 delete '/stock/:id' do
-
+  Stock.delete(params[:id])
+  redirect to('/stock')
 end 
