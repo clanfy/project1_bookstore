@@ -38,5 +38,10 @@ class Stock
     run_sql(sql)
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM books where id = #{id}"
+    run_sql(sql)
+  end
+
 
 end
