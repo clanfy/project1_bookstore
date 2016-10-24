@@ -9,6 +9,7 @@ nav ul li {
 }
 
 nav a {
+  border-radius: 25px;
   text-decoration: none;
   background-color: Black;
   color: white;
