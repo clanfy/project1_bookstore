@@ -6,7 +6,9 @@ end
 
 #NEW
 get '/stock/new' do
-
+  @books = Book.all()
+  @authors = Author.all()
+  erb(:'stock/new')
 end
 
 #CREATE
