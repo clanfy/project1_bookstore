@@ -1,5 +1,5 @@
-require( 'pg' )
-require( 'pry-byebug' )
+require('pg')
+require('pry-byebug')
 require_relative('../db/sql_runner')
 
 class Author

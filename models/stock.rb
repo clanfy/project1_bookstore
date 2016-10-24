@@ -1,20 +1,22 @@
-require( 'pg' )
-require( 'pry-byebug' )
+require('pg')
+require('pry-byebug')
 require_relative('../db/sql_runner')
 
 class Stock
 
-  attr_reader :id, :book_id, :author_id
+  attr_accessor :id, :book_id, :author_id, :quantity
 
   def initialize(options)
     @id = options['id'].to_i
     @book_id = options['book_id']
-    @author_id = options['author_id']
+    @quantity = options['quantity'].to_i
   end
 
   def save()
-    sql = "INSERT INTO stock (book_id, author_id) VALUES ('#{@book_id}, '#{@author_id}') RETURNING * "
+    sql = "INSERT INTO stock (book_id, quantity) VALUES ('#{@book_id}', #{@quantity}) RETURNING * "
     stock_info = run_sql(sql)
     @id = stock_info.first['id'].to_i
   end
+
+
 end
