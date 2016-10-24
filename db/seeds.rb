@@ -12,5 +12,5 @@ book1.save()
 book2 = Book.new({'title' => 'Anne of Avonlea', 'author_id' => author1.id })
 book2.save()
 
-stock1 = Stock.new({'book_id'=> book1.id, 'quantity' => 2})
+stock1 = Stock.new({'book_id'=> book1.id, 'author_id' => author1.id, 'quantity' => 2})
 stock1.save()
