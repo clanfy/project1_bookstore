@@ -1,0 +1,17 @@
+<div class="content">
+
+<h2>Add stock!</h2>
+
+<form action="/stock" method="post">
+  <label for="book">Book:</label>
+  <select name="book_id">
+  <% @books.each do |book| %>
+  <option value="<%= book.id %>">
+  <%= book.title %></option>
+  <% end %>
+  </select>
+
+  <input type="submit" value="Add stock">
+  </form>
+  
+  </div>
