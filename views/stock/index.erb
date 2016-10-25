@@ -1,27 +1,63 @@
 <h2>Stock List</h2>
 
 <% if @stock.count > 0 %>
+
 <ul>
   <% @stock.each do |stock| %>
-  <li>
-    <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
+  <div class="container">
+    <div class="row">
+      <li>
 
-    <br>
-    <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %> <b>Markup: </b><%= stock.book.mark_up %>%
-    <br>
-    <br>
+          <div class="col-sm-4">
+          <%= stock.book.title %>
+        </div>
+
+        <div class="col-sm-4">
+            <%= stock.book.author.name %>
+        </div>
+
+        <div class="col-sm-4">
+          <% if stock.quantity >= 10 %>
+          <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
+          <% elsif stock.quantity > 5 %>
+          <span style="background-color: yellow"><%= "Medium Level of Stock" %></span>
+          <% else stock.quantity < 5 %>
+          <span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
+          <% end %>
+      </div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-sm-3">
+        Quantity: <%= stock.quantity %>
+    </div>
+
+    <div class="col-sm-3">
+      <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %>
+  </div>
+
+  <div class="col-sm-3">
+      <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %>
+  </div>
+
+  <div class="col-sm-3">
+      <b>Markup: </b><%= stock.book.mark_up %>%
+  </div>
+</div>
+
+
+
+
+<!--     <br>
+     <b>Markup: </b><%= stock.book.mark_up %>%
+
     <b> Total Possible Sales: </b>£<%= stock.total_possible_sales  %>
-    <b> Total Possible Gross Profit: </b> 
+    <b> Total Possible Gross Profit: </b>  
+ -->
 
-    <br>
-    <br>
-    <% if stock.quantity >= 10 %>
-    <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
-    <% elsif stock.quantity > 5 %>
-    <span style="background-color: yellow"><%= "Medium Level of Stock" %></span>
-    <% else stock.quantity < 5 %>
-    <span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
-    <% end %>
+    
+ 
 
 
 
@@ -35,3 +71,5 @@
 <% else %>
 <p> Please add stock! </p>
 <% end %>
+</div>
+</div>

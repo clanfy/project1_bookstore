@@ -58,8 +58,16 @@ class Stock
   end
 
   def total_possible_sales
-    return '%.2f' % (quantity * book.sell_price)
+    '%.2f' % (quantity * book.sell_price)
   end
+
+  def total_cost
+    '%.2f' % (quantity * book.buy_price)
+  end
+
+  # def total_possible_gross_profit
+  #    return '%.2f' % (stock.total_possible_sales - stock.total_possible_sales)
+  # end
 
 
 end

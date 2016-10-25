@@ -2,6 +2,11 @@
 background-color: #29910f;
 }
 
+div {
+      border-style: solid;
+      border-width: 1px;
+}
+
 body {
   font-family: 'Palatino Linotype';
   margin: 0;
@@ -28,9 +33,6 @@ nav a:hover {
   color: #f44268;
 }
 
-div {
-
-}
 
 nav {
   padding: 15px;
