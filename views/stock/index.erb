@@ -17,7 +17,7 @@
         <div class="col-sm-4">
           <% if stock.quantity >= 10 %>
           <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
-          <% elsif stock.quantity > 5 %>
+          <% elsif stock.quantity >= 5 %>
           <span style="background-color: yellow"><%= "Medium Level of Stock" %></span>
           <% else stock.quantity < 5 %>
           <span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
@@ -25,40 +25,32 @@
       </div>
   </div>
 
-  <div class="row">
+<div class="row">
 
-<div class="col-sm-3">
+<div class="col-sm-2">
         Quantity: <%= stock.quantity %>
 </div>
 
-<div class="col-sm-3">
+<div class="col-sm-2">
       <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %>
 </div>
 
-<div class="col-sm-3">
+<div class="col-sm-2">
       <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %>
 </div>
 
-  <div class="col-sm-3">
+<div class="col-sm-2">
       <b>Markup: </b><%= stock.book.mark_up %>%
 </div>
+
+<div class="col-sm-2">
+      <b>Total Possible Sales:</b>£<%= stock.total_possible_sales  %>
 </div>
 
-
-
-
-<!--     <br>
-     <b>Markup: </b><%= stock.book.mark_up %>%
-
-    <b> Total Possible Sales: </b>£<%= stock.total_possible_sales  %>
-    <b> Total Possible Gross Profit: </b>  
- -->
-
-    
-    <br>
-    <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
-    <br>
-    <br>
+<div class="col-sm-2">
+<a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
+</div>
+</div>
 
   <% end %>
 
