@@ -17,10 +17,10 @@
     <input type="text" name="title" value="<%= @book.title %>"<br>
 
     <label for="buy_price">Buy Price:</label>
-    <input type="number" step="any" name="buy_price">
+    <input type="number" step="any" name="buy_price" value="<%= @book.buy_price %>">
 
     <label for="sell_price">Sell Price:</label>
-    <input type="number" step="any" name="sell_price">
+    <input type="number" step="any" name="sell_price" value="<%= @book.sell_price %>">
 
     <select name="author_id">
     <% @authors.each do |author| %>
