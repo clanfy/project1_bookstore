@@ -7,11 +7,13 @@
     <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
 
     <br>
-    <b>Buy Price:</b> £ <%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (stock.book.sell_price) %> <b>Markup % </b>
-    <%= stock.book.mark_up %>
+    <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %> <b>Markup: </b><%= stock.book.mark_up %>%
     <br>
     <br>
+    <b> Total Possible Sales: </b> £<%= '%.2f' % (stock.quantity * stock.book.sell_price) %>
 
+    <br>
+    <br>
     <% if stock.quantity >= 10 %>
     <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
     <% elsif stock.quantity > 5 %>
