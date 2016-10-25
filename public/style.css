@@ -5,7 +5,7 @@ body {
 
 nav ul li {
   font-family: 'Cookie', cursive;
-  display: inline-block;
+  display: inline-flex;
   list-style: table;
 }
 
