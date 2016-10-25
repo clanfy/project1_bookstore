@@ -66,6 +66,11 @@ class Book
     run_sql(sql)
   end
 
+  def mark_up()
+    gross_profit_margin = @sell_price - @buy_price
+    markup_percentage = gross_profit_margin / @buy_price
+    return markup_percentage
+  end
 
 
 end
