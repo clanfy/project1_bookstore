@@ -12,8 +12,8 @@ CREATE TABLE books (
   id serial4 PRIMARY KEY,
   title VARCHAR(255),
   author_id int4 REFERENCES authors(id),
-  buy_price MONEY,
-  sell_price MONEY
+  buy_price FLOAT,
+  sell_price FLOAT
 );
 
 CREATE TABLE stock (

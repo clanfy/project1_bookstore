@@ -6,6 +6,10 @@
   <% @books.each do |book| %>
   <li>
   <a href="/books/<%= book.id %>"><%= book.title %></a> by <%= book.author.name %>
+  <br>
+  <b>Buy Price:</b>
+  
+  £ <%= '%.2f' % (book.buy_price) %>
   </li>
   <% end %>
   </ul>

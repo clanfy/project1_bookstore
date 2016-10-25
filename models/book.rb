@@ -4,8 +4,7 @@ require_relative('../db/sql_runner')
 
 class Book
 
-  attr_reader :id, :title
-  attr_accessor :buy_price, :sell_price
+  attr_accessor :id, :title, :author_id, :buy_price, :sell_price
 
   def initialize(options)
     @id = options['id'].to_i
@@ -23,8 +22,8 @@ class Book
      sell_price) VALUES (
      '#{@title}',
      '#{@author_id}',
-     '#{@buy_price}',
-     '#{@sell_price}') 
+     #{@buy_price},
+     #{@sell_price}) 
      RETURNING * "
     book_info = run_sql(sql)
     @id = book_info.first['id'].to_i

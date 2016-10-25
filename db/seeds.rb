@@ -24,3 +24,4 @@ stock2 = Stock.new({'book_id'=> book2.id, 'author_id' => book2.author.id, 'quant
 stock2.save()
 stock3 = Stock.new({'book_id'=> book3.id, 'author_id' => book3.author.id, 'quantity' => 2})
 stock3.save()
+
