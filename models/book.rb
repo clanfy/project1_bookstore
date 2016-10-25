@@ -5,15 +5,27 @@ require_relative('../db/sql_runner')
 class Book
 
   attr_reader :id, :title
+  attr_accessor :buy_price, :sell_price
 
   def initialize(options)
     @id = options['id'].to_i
     @title = options['title']
     @author_id = options['author_id']
+    @buy_price = options['buy_price'].to_i
+    @sell_price = options['sell_price'].to_i
   end
 
   def save()
-    sql = "INSERT INTO books (title, author_id) VALUES ('#{@title}', '#{@author_id}') RETURNING * "
+    sql = "INSERT INTO books (
+     title,
+     author_id, 
+     buy_price, 
+     sell_price) VALUES (
+     '#{@title}',
+     '#{@author_id}',
+     '#{@buy_price}',
+     '#{@sell_price}') 
+     RETURNING * "
     book_info = run_sql(sql)
     @id = book_info.first['id'].to_i
   end
@@ -41,7 +53,12 @@ class Book
   end
 
   def self.update(options)
-    sql = "UPDATE books SET title = '#{options['title']}', author_id = #{options['author_id']} WHERE id = #{options['id']}"
+    sql = "UPDATE books SET 
+    title = '#{options['title']}', 
+    author_id = #{options['author_id']}, 
+    buy_price = #{options['buy_price']},
+    sell_price = #{options['sell_price']}
+    WHERE id = #{options['id']}"
     run_sql(sql)
   end
 

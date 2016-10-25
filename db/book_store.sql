@@ -11,7 +11,9 @@ CREATE TABLE authors (
 CREATE TABLE books (
   id serial4 PRIMARY KEY,
   title VARCHAR(255),
-  author_id int4 REFERENCES authors(id)
+  author_id int4 REFERENCES authors(id),
+  buy_price INT2, 
+  sell_price INT2
 );
 
 CREATE TABLE stock (
