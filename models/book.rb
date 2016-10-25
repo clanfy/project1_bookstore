@@ -68,8 +68,8 @@ class Book
 
   def mark_up()
     gross_profit_margin = @sell_price - @buy_price
-    markup_percentage = gross_profit_margin / @buy_price
-    return markup_percentage
+    markup_percentage = (gross_profit_margin / @buy_price) * 100
+    return markup_percentage.round
   end
 
 
