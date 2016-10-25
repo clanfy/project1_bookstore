@@ -2,6 +2,15 @@
 
   <h2>Edit Book</h2>
 
+  <h3>Original Pricing: </h3>
+  <br>
+ <b>Buy Price: </b>
+  £ <%= '%.2f' % (@book.buy_price) %>
+  <b>Sell Price:</b>
+  £ <%= '%.2f' % (@book.sell_price) %>
+  <br>
+  <br>
+
   <form action="/books/<%= @book.id %>" method="post">
     <input type="hidden" name="_method" value="put">
     <label for="title">Title:</label>
