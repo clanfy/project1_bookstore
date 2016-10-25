@@ -8,15 +8,15 @@
 <br>
 <% if stock.quantity >= 10 %>
 
-<%= "High Level of Stock" %>
+<span style="background-color: #42f498"><%= "High Level of Stock" %></span>
 
 <% elsif stock.quantity > 5 %>
 
-<%= "Medium Level of Stock" %>
+<span style="background-color: yellow"><%= "Medium Level of Stock" %></span>
 
 <% else stock.quantity < 5 %>
 
-<%= "Low Level of Stock" %>
+<span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
 
 <% end %>
 
