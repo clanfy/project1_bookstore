@@ -8,11 +8,7 @@
   <form action="/stock/<%= @stock.id %>" method="post">
     <input type="hidden" name="_method" value="put">
     <label for="title">Book title:</label>
-    <select name="book_id">
-      <% @books.each do |book| %>
-      <option value="<%= book.id %>" <%= 'selected' if @stock.book.id == book.id %>><%= book.title %></option>
-      <% end %>
-    </select>
+    <input type="hidden" name="book_id" value="<%= @stock.book.id %>">
 
     <select name="author_id">
       <% @authors.each do |author| %>
