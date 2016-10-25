@@ -11,7 +11,7 @@ nav ul li {
 
 nav a {
   border-radius: 25px;
-  font-size: 35px;
+  font-size: 30px;
   text-decoration: none;
   background-color: Black;
   color: white;
@@ -22,6 +22,10 @@ nav a {
 nav a:hover {
   background-color: white;
   color: #f44268;
+}
+
+div {
+
 }
 
 nav {

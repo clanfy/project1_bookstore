@@ -8,3 +8,7 @@ require_relative('./models/stock')
 require_relative('./controllers/books_controller')
 require_relative('./controllers/authors_controller')
 require_relative('./controllers/stock_controller')
+
+get '/' do
+  erb(:'index')
+end
