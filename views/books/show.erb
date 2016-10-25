@@ -1,6 +1,6 @@
 <%= @book.title %> by <%= @book.author.name %>
 <br>
-<b>Buy Price:</b> £ <%= '%.2f' % (@book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (@book.sell_price) %>
+<b>Buy Price:</b> £ <%= '%.2f' % (@book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (@book.sell_price) %> <b>Markup: % </b> <%= @book.mark_up %>
 <br>
 <br>
 <a href="/books/<%= @book.id %>/edit">Edit Book</a>
