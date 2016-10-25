@@ -7,7 +7,8 @@
     <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
 
     <br>
-    <b>Buy Price:</b> £ <%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (stock.book.sell_price) %>
+    <b>Buy Price:</b> £ <%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (stock.book.sell_price) %> <b>Markup % </b>
+    <%= stock.book.mark_up %>
     <br>
     <br>
 
