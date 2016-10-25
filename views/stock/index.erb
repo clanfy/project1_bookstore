@@ -5,8 +5,25 @@
   <% @stock.each do |stock| %>
   <li>
   <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
+<br>
+<% if stock.quantity >= 10 %>
+
+<%= "High Level of Stock" %>
+
+<% elsif stock.quantity > 5 %>
+
+<%= "Medium Level of Stock" %>
+
+<% else stock.quantity < 5 %>
+
+<%= "Low Level of Stock" %>
+
+<% end %>
+
+
   <br>
   <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
+  <br>
   <br>
   </li>
   <% end %>
@@ -14,43 +31,3 @@
   <% else %>
   <p> Please add stock! </p>
   <% end %>
-
-  <div class="container">
-    <div class="row">
-
-    <% if @stock.count > 0 %>
-      <ul>
-      <% @stock.each do |stock| %>
-      <li>
-      <div class="col-sm-4">
-        <p><%= stock.book.title %></p>
-    
-      </div>
-
-
-
-      <div class="col-sm-4">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-
-
-
-      <div class="col-sm-4">
-        <h3>Column 3</h3> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-
-      <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
-      <br>
-      </li>
-      <% end %>
-      </ul>
-      <% else %>
-      <p> Please add stock! </p>
-      <% end %>
-
-    </div>
-  </div>
