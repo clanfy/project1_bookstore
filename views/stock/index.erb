@@ -5,7 +5,12 @@
   <% @stock.each do |stock| %>
   <li>
     <%= stock.quantity %> X <%= stock.book.title %> by <%= stock.book.author.name %>
+
     <br>
+    <b>Buy Price:</b> £ <%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (stock.book.sell_price) %>
+    <br>
+    <br>
+
     <% if stock.quantity >= 10 %>
     <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
     <% elsif stock.quantity > 5 %>
@@ -13,6 +18,8 @@
     <% else stock.quantity < 5 %>
     <span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
     <% end %>
+
+
 
     <br>
     <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
