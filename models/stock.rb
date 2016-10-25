@@ -57,5 +57,9 @@ class Stock
     run_sql(sql)
   end
 
+  def total_possible_sales
+    return '%.2f' % (quantity * book.sell_price)
+  end
+
 
 end

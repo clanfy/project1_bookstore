@@ -10,7 +10,8 @@
     <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %> <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %> <b>Markup: </b><%= stock.book.mark_up %>%
     <br>
     <br>
-    <b> Total Possible Sales: </b> £<%= '%.2f' % (stock.quantity * stock.book.sell_price) %>
+    <b> Total Possible Sales: </b>£<%= stock.total_possible_sales  %>
+    <b> Total Possible Gross Profit: </b> 
 
     <br>
     <br>
