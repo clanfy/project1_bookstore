@@ -11,8 +11,8 @@ class Book
     @id = options['id'].to_i
     @title = options['title']
     @author_id = options['author_id']
-    @buy_price = options['buy_price'].to_i
-    @sell_price = options['sell_price'].to_i
+    @buy_price = options['buy_price'].to_f
+    @sell_price = options['sell_price'].to_f
   end
 
   def save()
