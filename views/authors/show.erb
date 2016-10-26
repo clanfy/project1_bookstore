@@ -4,15 +4,10 @@
 <br>
 
 <h3>Books stocked by this Author</h3>
-
 <% @books.each do |book| %>
-
 <%= book.title if book.author.id == @author.id%>
-
 <br>
 <% end %>
-
-
 
 <br>
 <a href="/authors/<%= @author.id%>/edit">Edit Author</a>
