@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
+# require('json')
 
 require_relative('./models/book')
 require_relative('./models/author')
@@ -12,3 +13,8 @@ require_relative('./controllers/stock_controller')
 get '/' do
   erb(:'index')
 end
+
+
+
+
+

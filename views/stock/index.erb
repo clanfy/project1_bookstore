@@ -49,16 +49,16 @@
   </div>
 
   <div class="row">
-<!-- first -->
+    <!-- first -->
     <div class="col-sm-4">
-    <b>Total Purchase Cost:</b> £<%= stock.total_cost  %>
+      <b>Total Purchase Cost:</b> £<%= stock.total_cost  %>
 
     </div>
-<!-- second -->
+    <!-- second -->
     <div class="col-sm-4">
-    <b>Total Possible Sales:</b> £<%= stock.total_possible_sales  %>
+      <b>Total Possible Sales:</b> £<%= stock.total_possible_sales  %>
     </div>
-<!-- third -->
+    <!-- third -->
     <div class="col-sm-4">
       <b>Total Possible Gross Profit:</b> £<%= '%.2f' % (stock.book.gross_profit * stock.quantity) %>
     </div>
@@ -72,5 +72,10 @@
 <p> Please add stock! </p>
 
 <% end %>
-
 </div>
+
+<form method="get">
+Search inventory
+<input name="search" value="" type="text"/>
+<input type="submit" value="search" />
+</form>
