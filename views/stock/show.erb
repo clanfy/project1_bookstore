@@ -13,7 +13,7 @@
     <td><%= @stock.quantity %></td>
     <td>£ <%= '%.2f' % (@stock.book.buy_price) %></td>
     <td>£ <%= '%.2f' % (@stock.book.sell_price) %></td>
-    <td>£ <%= '%.2f' % (@stock.book.gross_profit) %> -- <%= @stock.book.mark_up_percent %>%</td>
+    <td>£ <%= '%.2f' % (@stock.book.gross_profit) %> // <%= @stock.book.mark_up_percent %>%</td>
   </tr>
   </table>
 
