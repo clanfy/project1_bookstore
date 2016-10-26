@@ -66,8 +66,10 @@ class Stock
   end
 
   # def total_possible_gross_profit
-  #    return '%.2f' % (stock.total_possible_sales - stock.total_possible_sales)
+  #   total_sales = stock.total_possible_sales
+  #    return '%.2f' %  (total_sales)
   # end
+
 
 
 end
