@@ -1,7 +1,19 @@
 <h2>Author</h2>
 
-<h3><%= @author.name %></h3>
+<h4><%= @author.name %></h4>
 <br>
+
+<h3>Books stocked by this Author</h3>
+
+<% @books.each do |book| %>
+
+<%= book.title if book.author.id == @author.id%>
+
+<br>
+<% end %>
+
+
+
 <br>
 <a href="/authors/<%= @author.id%>/edit">Edit Author</a>
 <br>
@@ -12,10 +24,8 @@
 
 
 <form action="/authors/<%= @author.id %>" method="post">
-
   <input type="hidden" name="_method" value="delete">
-
   <form action="/authors/<%= @author.id %>/delete" method="post">
-
     <input type="submit" onclick="alert('Author will be deleted')" value="Delete">
   </form>
+</form>

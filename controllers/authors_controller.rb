@@ -19,6 +19,7 @@ end
 #SHOW
 get '/authors/:id' do
  @author = Author.find(params[:id])
+ @books = Book.all
  erb(:'authors/show')
 end
 
