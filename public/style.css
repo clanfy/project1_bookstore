@@ -1,6 +1,10 @@
 .jumbotron {
-background-color: #29910f;
+  border-radius: 25px;
+  background-image: url("https://nanapeel.files.wordpress.com/2011/09/leather_texture1.jpg");
+  background-size: cover;
 }
+
+https://nanapeel.files.wordpress.com/2011/09/leather_texture1.jpg
 
 .container {
 /*      border-style: solid;
@@ -48,7 +52,8 @@ nav a {
 
 nav a:hover {
   background-color: white;
-  color: #f44268;
+  color: #703505;
+
 }
 
 
