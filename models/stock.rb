@@ -75,6 +75,12 @@
     '%.2f' % (quantity * book.buy_price)
   end
 
+  # def total_stock
+  #   inventory_total = []
+  #   stock = Stock.all
+  #   inventory_total << stock.quantity
+  #   return inventory total
+  # end
 
 
 end
