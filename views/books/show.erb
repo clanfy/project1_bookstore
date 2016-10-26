@@ -2,17 +2,17 @@
 
 <h3><%= @book.title %> by <%= @book.author.name %></h3>
 <br>
-<table style="width:50%"
-<tr>
-  <th>Buy Price</th>
-  <th>Sell Price</th>
-  <th>Mark-up</th>
-</tr>
-<tr>
-<td>£ <%= '%.2f' % (@book.buy_price) %></td>
-<td>£ <%= '%.2f' % (@book.sell_price) %></td>
-<td><%= @book.mark_up_percent %>%</td>
-</tr>
+<table style="width:50%">
+  <tr>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
+    <th>Mark-up</th>
+  </tr>
+  <tr>
+    <td>£ <%= '%.2f' % (@book.buy_price) %></td>
+    <td>£ <%= '%.2f' % (@book.sell_price) %></td>
+    <td><%= @book.mark_up_percent %>%</td>
+  </tr>
 </table>
 <br>
 <br>
@@ -25,9 +25,9 @@
 
 <form action="/books/<%= @book.id %>" method="post">
 
-<input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="_method" value="delete">
 
-<form action="/books/<%= @book.id %>/delete" method="post">
+  <form action="/books/<%= @book.id %>/delete" method="post">
 
-<input type="submit" value="Delete">
-</form>
+    <input type="submit" value="Delete">
+  </form>

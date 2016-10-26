@@ -1,8 +1,21 @@
-<%= @stock.quantity %> X <%= @stock.book.title %> by <%= @stock.book.author.name %>
+<h2>Stock id: <%= @stock.id %> </h2>
+
+<h3><%= @stock.book.title %> by <%= @stock.book.author.name %></h3>
 <br>
-<br>
-<b>Buy Price:</b> £ <%= '%.2f' % (@stock.book.buy_price) %> <b>Sell Price:</b> £ <%= '%.2f' % (@stock.book.sell_price) %>
-<br>
+<table style="width:75%">
+  <tr>
+    <th>Quantity</th>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
+    <th>Mark-up</th>
+  </tr>
+  <tr>
+    <td><%= @stock.quantity %></td>
+    <td>£ <%= '%.2f' % (@stock.book.buy_price) %></td>
+    <td>£ <%= '%.2f' % (@stock.book.sell_price) %></td>
+    <td>£ <%= '%.2f' % (@stock.book.gross_profit) %> -- <%= @stock.book.mark_up_percent %>%</td>
+  </tr>
+  </table>
 
 
 <a href="/stock/<%= @stock.id %>/edit">Edit Stock</a>

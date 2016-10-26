@@ -62,6 +62,12 @@ nav {
   background-image: url("http://www.oliversacks.com/os/wp-content/uploads/2015/04/DSC_6976-opt.jpg");
 }
 
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 15px;
+}
+
 main {
   margin: 20px;
 }
