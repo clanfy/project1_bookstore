@@ -2,58 +2,76 @@
 
 <% if @stock.count > 0 %>
 
-<div class="container">
+
+
   <% @stock.each do |stock| %>
 
+  <div class="container">
+
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <b><%= stock.book.title %></b>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <b><%= stock.book.author.name %></b>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
+        <b>Quantity:</b> <%= stock.quantity %> --
           <% if stock.quantity >= 10 %>
-          <span style="background-color: #42f498"><%= "High Level of Stock" %></span>
+          <span style="background-color: #42f498"><%= "High" %></span>
           <% elsif stock.quantity >= 5 %>
-          <span style="background-color: yellow"><%= "Medium Level of Stock" %></span>
+          <span style="background-color: yellow"><%= "Medium" %></span>
           <% else stock.quantity < 5 %>
-          <span style="background-color: #f44262"><%= "Low Level of Stock" %></span>
+          <span style="background-color: #f44262"><%= "Low" %></span>
           <% end %>
       </div>
+
+      <div class="col-sm-3">
+      <a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
+      </div>
+
   </div>
 
 <div class="row">
 
-<div class="col-sm-2">
-        Quantity: <%= stock.quantity %>
-</div>
-
-<div class="col-sm-2">
+<div class="col-sm-4">
       <b>Buy Price:</b> £<%= '%.2f' % (stock.book.buy_price) %>
 </div>
 
-<div class="col-sm-2">
+<div class="col-sm-4">
       <b>Sell Price:</b> £<%= '%.2f' % (stock.book.sell_price) %>
 </div>
 
-<div class="col-sm-2">
+<div class="col-sm-4">
       <b>Markup: </b><%= stock.book.mark_up %>%
 </div>
+</div>
 
-<div class="col-sm-2">
+<div class="row">
+
+<div class="col-sm-4">
       <b>Total Possible Sales:</b>£<%= stock.total_possible_sales  %>
 </div>
 
-<div class="col-sm-2">
-<a href="/stock/<%= stock.id %>">Update/delete Stock Levels </a>
+<div class="col-sm-4">
+BLANK
 </div>
+
+<div class="col-sm-4">
+BLANK
+</div>
+</div>
+<br>
+<br>
+<br>
 </div>
   <% end %>
+
 <% else %>
 <p> Please add stock! </p>
+
 <% end %>
-</div>
+
 </div>

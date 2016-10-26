@@ -2,12 +2,28 @@
 background-color: #29910f;
 }
 
-div {
+.container {
+/*      border-style: solid;
+      border-width: 1px;*/
+      text-align: center;
+
+}
+
+.col-sm-3 {
       border-style: solid;
       border-width: 1px;
       text-align: center;
 
 }
+
+.col-sm-4 {
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+
+}
+
+
 
 body {
   font-family: 'Palatino Linotype';
