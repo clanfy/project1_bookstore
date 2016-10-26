@@ -15,10 +15,10 @@
     <input type="hidden" name="book_id" value="<%= @stock.book.id %>">
 
     <input type="hidden" name="author_id" value="<%= @stock.book.author.id %>">
-
+    <br>
 
     <label for="quantity">Quantity:</label>
-    <input type="number" name="quantity" value="<%= @stock.quantity %>">
+    <input type="number" min="0" name="quantity" value="<%= @stock.quantity %>" id="quantity">
     <br>
     <br>
     <input type='submit' value="Update Stock">

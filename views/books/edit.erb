@@ -22,7 +22,8 @@
     <label for="sell_price">Sell Price:</label>
     <input type="number" step="any" name="sell_price" value="<%= @book.sell_price %>" id="sell_price">
 
-    <select name="author_id">
+    <label for="author">Author:</label>
+    <select name="author_id" id="author">
     <% @authors.each do |author| %>
     <option value="<%= author.id %>" <%= 'selected' if @book.author.id == author.id %>><%= author.name %></option>
     <% end %>
