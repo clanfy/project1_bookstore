@@ -39,7 +39,9 @@ class Author
   end
 
   def self.update(options)
-    sql = "UPDATE authors SET name = '#{options['name']}' WHERE id = #{options['id']}"
+    sql = "UPDATE authors SET 
+    name = '#{options['name']}' 
+    WHERE id = #{options['id']}"
     run_sql(sql)
   end
 

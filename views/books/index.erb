@@ -2,29 +2,29 @@
 
 
 <% if @books.count > 0 %>
-  <ul>
+<ul>
   <% @books.each do |book| %>
   <li>
-  <a href="/books/<%= book.id %>"><%= book.title %></a> by <%= book.author.name %>
-  <br>
-  <b>Buy Price:</b>
-  
-  £ <%= '%.2f' % (book.buy_price) %>
-  <b>Sell Price:</b>
-  £ <%= '%.2f' % (book.sell_price) %>
-  <b>Markup: </b><%= book.mark_up_percent %>%
+    <a href="/books/<%= book.id %>"><%= book.title %></a> by <%= book.author.name %>
+    <br>
+    <b>Buy Price:</b>
+    
+    £ <%= '%.2f' % (book.buy_price) %>
+    <b>Sell Price:</b>
+    £ <%= '%.2f' % (book.sell_price) %>
+    <b>Markup: </b><%= book.mark_up_percent %>%
   </li>
   <br>
   <% end %>
-  </ul>
-  <% else %>
-    <p> Please add a book! </p>
+</ul>
+<% else %>
+<p> Please add a book! </p>
 
-    <% end %>
+<% end %>
 
-    <a href="/stock/new">Next -- Add stock</a>
+<a href="/stock/new">Next -- Add stock</a>
 
-    <br>
-    <br>
-    <a href="/books/new">Or Add a Book</a>
+<br>
+<br>
+<a href="/books/new">Or Add a Book</a>
 

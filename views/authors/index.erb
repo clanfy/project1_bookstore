@@ -2,15 +2,15 @@
 
 <% if @authors.count > 0 %>
 <ul>
-<% @authors.each do |author| %>
+  <% @authors.each do |author| %>
   <li>
-  <a href="/authors/<%= author.id %>"><%= author.name %></a>
+    <a href="/authors/<%= author.id %>"><%= author.name %></a>
   </li>
   <% end %>
-  </ul>
-  <% else %>
-  <p> Please add an author! </p>
-  <% end %>
+</ul>
+<% else %>
+<p> Please add an author! </p>
+<% end %>
 <br>
 <a href="/books/new">Next -- Add a book</a>
 <br>

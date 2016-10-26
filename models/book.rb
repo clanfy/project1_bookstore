@@ -16,15 +16,15 @@ class Book
 
   def save()
     sql = "INSERT INTO books (
-     title,
-     author_id, 
-     buy_price, 
-     sell_price) VALUES (
-     '#{@title}',
-     '#{@author_id}',
-     #{@buy_price},
-     #{@sell_price}) 
-     RETURNING * "
+    title,
+    author_id, 
+    buy_price, 
+    sell_price) VALUES (
+    '#{@title}',
+    '#{@author_id}',
+    #{@buy_price},
+    #{@sell_price}) 
+    RETURNING * "
     book_info = run_sql(sql)
     @id = book_info.first['id'].to_i
   end

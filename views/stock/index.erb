@@ -9,7 +9,7 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <b><%= stock.book.title %> by <%= stock.book.author.name %></b>
+      <b>Title: </b><%= stock.book.title %> - <b>Author: </b><%= stock.book.author.name %>
     </div>
 
     <div class="col-sm-3">
@@ -71,7 +71,7 @@
 </div>
 
 <form method="get">
-Search inventory
-<input name="search" value="" type="text"/>
-<input type="submit" value="search" />
+  Search inventory
+  <input name="search" value="" type="text"/>
+  <input type="submit" value="search" />
 </form>

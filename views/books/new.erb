@@ -1,6 +1,6 @@
 <div class="content">
 
-<h2>Add a book!</h2>
+  <h2>Add a book!</h2>
 
   <form action="/books" method="post">
     <label for="title">Title:</label>
@@ -17,7 +17,7 @@
     <select name="author_id" id="author">
       <% @authors.each do |author| %>
       <option value="<%= author.id %>">
-      <%= author.name %></option>
+        <%= author.name %></option>
         <% end %> 
       </select>
 

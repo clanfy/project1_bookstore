@@ -4,7 +4,7 @@
 
   <h3>Original Pricing: </h3>
   <br>
- <b>Buy Price: </b>
+  <b>Buy Price: </b>
   £ <%= '%.2f' % (@book.buy_price) %>
   <b>Sell Price:</b>
   £ <%= '%.2f' % (@book.sell_price) %>
@@ -24,13 +24,13 @@
 
     <label for="author">Author:</label>
     <select name="author_id" id="author">
-    <% @authors.each do |author| %>
-    <option value="<%= author.id %>" <%= 'selected' if @book.author.id == author.id %>><%= author.name %></option>
-    <% end %>
-  </select>
+      <% @authors.each do |author| %>
+      <option value="<%= author.id %>" <%= 'selected' if @book.author.id == author.id %>><%= author.name %></option>
+      <% end %>
+    </select>
 
-  <input type='submit' value="Update Book">
-</form>
+    <input type='submit' value="Update Book">
+  </form>
 
 
 </div>

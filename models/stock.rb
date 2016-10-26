@@ -1,8 +1,8 @@
  require('pg')
-require('pry-byebug')
-require_relative('../db/sql_runner')
+ require('pry-byebug')
+ require_relative('../db/sql_runner')
 
-class Stock
+ class Stock
 
   attr_accessor :id, :book_id, :author_id, :quantity
 
@@ -14,7 +14,13 @@ class Stock
   end
 
   def save()
-    sql = "INSERT INTO stock (book_id, author_id, quantity) VALUES ('#{@book_id}', '#{@author_id}', #{@quantity}) RETURNING * "
+    sql = "INSERT INTO stock (
+    book_id, 
+    author_id, 
+    quantity) VALUES (
+    '#{@book_id}',
+    '#{@author_id}',
+    #{@quantity}) RETURNING * "
     stock_info = run_sql(sql)
     @id = stock_info.first['id'].to_i
   end
@@ -48,7 +54,11 @@ class Stock
   end
 
   def self.update(options)
-    sql = "UPDATE stock SET book_id = #{options['book_id']}, author_id = #{options['author_id']}, quantity = #{options['quantity']} WHERE id = #{options['id']}"
+    sql = "UPDATE stock SET 
+    book_id = #{options['book_id']},
+    author_id = #{options['author_id']},
+    quantity = #{options['quantity']} 
+    WHERE id = #{options['id']}"
     run_sql(sql)
   end
 
@@ -65,10 +75,7 @@ class Stock
     '%.2f' % (quantity * book.buy_price)
   end
 
-  # def total_possible_gross_profit
-  #   total_sales = stock.total_possible_sales
-  #    return '%.2f' %  (total_sales)
-  # end
+
 
 
 

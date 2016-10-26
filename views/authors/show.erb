@@ -13,9 +13,9 @@
 
 <form action="/authors/<%= @author.id %>" method="post">
 
-<input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="_method" value="delete">
 
-<form action="/authors/<%= @author.id %>/delete" method="post">
+  <form action="/authors/<%= @author.id %>/delete" method="post">
 
-<input type="submit" onclick="alert('Author will be deleted')" value="Delete">
-</form>
+    <input type="submit" onclick="alert('Author will be deleted')" value="Delete">
+  </form>

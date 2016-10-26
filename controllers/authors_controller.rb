@@ -6,14 +6,14 @@ end
 
 #NEW
 get '/authors/new' do
-erb(:'authors/new')
+  erb(:'authors/new')
 end
 
 #CREATE
 post '/authors' do
-@author = Author.new(params)
-@author.save()
-redirect to('/authors')
+  @author = Author.new(params)
+  @author.save()
+  redirect to('/authors')
 end
 
 #SHOW

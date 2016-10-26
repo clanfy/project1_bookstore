@@ -38,6 +38,6 @@ end
 
 #DELETE
 delete '/books/:id' do
-    Book.delete(params[:id])
-    redirect to('/books')
+  Book.delete(params[:id])
+  redirect to('/books')
 end
