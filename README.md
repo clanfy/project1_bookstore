@@ -1,6 +1,6 @@
 # project1_bookstore
 
-For our first project we created an app using Ruby, Sinatra and SQL databases. 
+First project - creating an app using Ruby, Sinatra, SQL databases and MVC design. 
 
 User Story 
 
